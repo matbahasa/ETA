@@ -1,7 +1,7 @@
 # ETA: Easy Text Annotator
 
 ## How to cite
-Nomoto, Hiroki, Kaoru Kayukawa & Yuta Takayasu. 2022. Easy Text Annotator (ETA).
+Nomoto, Hiroki, Kaoru Kayukawa & Yuta Takayasu. 2022. _ETA: Easy Text Annotator_. GitHub repository. https://github.com/matbahasa/ETA
 ```bibtex
 @misc{NomotoEtAlETA,
   author = {Nomoto, Hiroki and Kayukawa, Kaoru and Takayasu, Yuta},
