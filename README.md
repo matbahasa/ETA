@@ -10,6 +10,7 @@ Download the zip file from this page and unzip it.  For uninstallation, simply d
     2. Annotation (tab-separated text file)
         - To start a completely new annotation, you can use `annotation_template.txt` with necessary customization.  You need to change the FILE NAME, FEATURE\_NAME, and the number and name(s) of the VALUE(s) in accordance with your task.
         - Alternatively, you can also use a file exported from a more sophisticated tool.  In fact, `annotation_template.txt` adopts the format of [UAM Corpus Tool](http://www.corpustool.com).
+- Open `Easy Text Annotator.html`.
 - Drag and drop the two files above onto the main window.
 - Select the range you wish to annotate.  Then, click on the "+" button at the bottom right corner.
 
