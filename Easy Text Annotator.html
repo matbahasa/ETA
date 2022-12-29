@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Easy Text Annotator</title>
+<link rel="stylesheet" href="script/Styles.css">
+
+<!-- Lib import -->
+<script src="script/jquery/dist/jquery.js"></script>
+<!-- <script src="node_modules/zlib/lib/zlib.js"></script> -->
+</head>
+
+<body>
+  <h1>Easy Text Annotator</h1>
+  <div class="MainWindow" id="MainWindow">
+    <div style="overflow: scroll; height: 100%;"  id="SentenceWindow">
+    </div>
+    <div class="AnnotationIndfoContainer">
+      <div class="AddButton" id="AddButton"></div>
+      <!--タグ確認-->
+      <div class="AnnotationInfo" id="CheckTag">
+        <div class="CloseButton"></div>
+        <p class="AnnotationInfoHead" id="CheckTitle">Tanaka</p>
+        <p class="AnnotationInfoHead">Selected</p>
+        <p class="AnnotationInfoContent" id="CheckTag1"></p>
+        <p class="AnnotationInfoHead" id="CheckTag3"></p>
+        <div class="Select2">
+          <select id="CheckTag2" style="font-size: 20px;">
+          </select>
+        </div>
+        <p class="AnnotationInfoHead">Comment</p>
+        <div class="InputComment" >
+          <textarea wrap="soft" id="CheckComment" style="font-size: 15px;"></textarea>
+        </div>
+        <div class="DeleteButton" id="DeleteButton">Delete Annotation</div>
+      </div>
+      <!--タグ新設-->
+      <div class="AnnotationInfo" id="AddTag">
+        <div class="CloseButton"></div>
+        <p class="AnnotationInfoHead" id="AddTitle"></p>
+        <p class="AnnotationInfoHead">Selected</p>
+        <div class="Select1" id="AddTag1"></div>
+        <p class="AnnotationInfoHead" id="AddTag3"></p>
+        <div class="Select2">
+          <select id="AddTag2" style="font-size: 20px;">
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="address">address</option>
+            <option value="null">None</option>
+          </select>
+        </div>
+        <p class="AnnotationInfoHead">Comment</p>
+        <div class="InputComment" >
+          <textarea wrap="soft" id="AddComment" style="font-size: 15px;"></textarea>
+        </div>
+        <div class="AddTagDoneButton" id="AddDoneButton">Create Annotation</div>
+      </div>
+    </div>
+  <input placeholder="Editor's name" class="NameInput" id="EditorNameBox">
+  <input placeholder="File name" class="NameInput" id="FilenameBox">
+  <a class="DownloadButton" id="AnDataDL">Raw Annotation</a>
+  <a class="DownloadButton" id="AgDataDL">Summary Table</a>
+  <a class="DownloadButton" id="ApDataDL">HTML</a>
+  </div>
+
+<!-- Main Script Import -->
+<script src="script/main.js"></script>
+<script src="script/parser.js"></script>
+</body>
+</html>

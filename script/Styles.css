@@ -1,0 +1,284 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* :root {
+  --annotation1: #E62C2D;
+  --annotation2: #2BAB6E;
+  --annotation3: #BE7E45;
+  --annotation4: black;
+  --lannotation1: #e62c2c50;
+  --lannotation2: #2bab6d50;
+  --lannotation3: #BE7E4550;
+  --lannotation4: #00000050;
+} */
+
+body {
+  min-height: 1080px;
+  overflow: hidden;
+}
+pre {
+  font: normal normal normal 25px/30px Arial;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 5px;
+}
+.MainWindow {
+  color: #707070;
+  padding: 20px 20px;
+  position: absolute;
+  top: 80px;
+  bottom: 100px;
+  left: 50px;
+  right: 50px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px 5px #00000029;
+  font: normal normal normal 25px/30px Arial;
+}
+.NoSelected {
+  font-size: 25px;
+  color: black;
+}
+.Selected {
+  font-size: 30px;
+  color: black;
+}
+.AnnotationIndfoContainer {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  bottom: 0px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 5px;
+  color:black;
+}
+/* .Annotation1 {
+  color: var(--annotation1);
+  background: linear-gradient(transparent 93%, var(--annotation1) 0%);
+  display: inline;
+}
+.Annotation2 {
+  color: var(--annotation2);
+  background: linear-gradient(transparent 93%, var(--annotation2) 0%);
+  display: inline;
+}
+.Annotation3 {
+  color: var(--annotation3);
+  background: linear-gradient(transparent 93%, var(--annotation3) 0%);
+  display: inline;
+}
+.Annotation0 {
+  color:var(--annotation4);
+  background: linear-gradient(transparent 93%, var(--annotation4) 0%);
+  display: inline;
+} */
+/* .TagBack0{
+  color: var(--annotation4);
+  background-color: var(--lannotation4);
+}
+.TagBack1{
+  color: var(--annotation1);
+  background-color: var(--lannotation1);
+}
+.TagBack2{
+  color: var(--annotation2);
+  background-color: var(--lannotation2);
+}
+.TagBack3{
+  color: var(--annotation3);
+  background-color: var(--lannotation3);
+} */
+  
+.AnnotationLevel1{
+	  padding: 0 0 0px;
+}
+
+.AnnotationLevel2{
+	  padding: 0 0 5px;
+}
+
+.AnnotationLevel3{
+	  padding: 0 0 10px;
+}
+
+.AnnotationInfo {
+  padding: 0px 25px;
+  margin: 0px 10px;
+  background: white;
+  width: 200px;
+  box-shadow: 0px 0px 6px 5px #00000029;
+  border-radius: 20px;
+}
+.AnnotationInfoHead {
+  margin: 25px 10px 0px 0px;
+  font-size: 25px;
+  /*color: black;*/
+}
+.AnnotationInfoContent {
+  margin: 10px;
+  font-size: 20px;
+}
+.TagSelected{
+  font-weight: bold;
+  line-height: 40px;
+}
+.TagNoSelected{
+  font-weight: normal;
+}
+.DeleteButton {
+  position: absolute;
+  bottom: 25px;
+  background: #707070;
+  border-radius: 6px;
+  font-size: 17px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 25px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.DeleteButton:hover {
+  background: #F00000;
+  color: #FFF;
+}
+.DeleteButton:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+.DeleteButton:hover:after {
+  border-color: #F00000;
+}
+.AddTagDoneButton {
+  position: absolute;
+  bottom: 25px;
+  background: #707070;
+  border-radius: 6px;
+  font-size: 17px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 25px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.AddTagDoneButton:hover {
+  background: #16bada;
+  color: #FFF;
+}
+.AddTagDoneButton:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+.AddTagDoneButton:hover:after {
+  border-color: #16bada;
+}
+.CloseButton {
+  top: -20px;
+  left: 205px;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #707070;
+  transition: 0.3s ease-in-out;
+}
+.CloseButton::before, .CloseButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 25px;
+  background: #FFF;
+  border-radius: 10%;
+}
+.CloseButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.CloseButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.CloseButton:hover {
+  background: #F00000;
+}
+.AddButton {
+  margin: 15px;
+  /*display: block;*/
+  position: relative;
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #51C5E3;
+  transition: 0.3s ease-in-out;
+}
+.AddButton::before, .AddButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 25px;
+  background: #FFF;
+  border-radius: 10%;
+}
+.AddButton::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.AddButton::after {
+  transform: translate(-50%, -50%);
+}
+.AddButton:hover {
+  background: #1B8CA9;
+}
+.NameInput {
+  height: 30px;
+  margin: 50px 10px;
+  font-size: 25px;
+}
+.DownloadButton {
+  /* position: absolute; */
+  bottom: -80px;
+  right: 10px;
+  width: 150px;
+  background: #51C5E3;
+  border-radius: 6px;
+  font-size: 17px;
+  text-align: center;
+  height: 30px;
+  margin: 50px 10px;
+  padding: 10px 10px;
+  right: 30px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.DownloadButton:hover {
+  background: #1B8CA9;
+  color: #FFF;
+}
+.DownloadButton:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+.DownloadButton:hover:after {
+  border-color: #1B8CA9;
+}
