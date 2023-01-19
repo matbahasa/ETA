@@ -511,6 +511,9 @@ function TSVDownload(){
     releaseTagObjTree();
     for(const pre of ps){
         AggregatedText += pre.textContent;
+        if(pre.textContent.split("\t").length-1 < tabCount){
+            for(let i = 0;i<tabCount-pre.textContent.split("\t").length+1;i++) AggregatedText +="\t";
+        }
         for(const i in TagNames2nd){
             const spans = pre.querySelectorAll("span.Annotation"+i.toString());
             AggregatedText+="\t"+spans.length.toString()+"\t";
@@ -520,7 +523,7 @@ function TSVDownload(){
                 for(tag of TagObjList){
                     if(tag.ID == s.id) break;
                 }
-                str+=s.textContent;
+                str+=s.textContent.replaceAll("\t","")
                 if(tag.CommentRole) str +="【"+ tag.CommentRole + "】";
                 spanTexts.push(str);
             }
