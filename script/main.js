@@ -532,7 +532,7 @@ function TSVDownload(){
         AggregatedText+="\n"
     }
     makeTagObjTree();
-    let tmp = "\nFile Name\t"+filename+"\nFeature\t"+TagNames1st[1]+"\nEditor's Name\t"+editorName+"\n"+"Text";
+    let tmp = "File Name\t"+filename+"\nFeature\t"+TagNames1st[0]+"\nEditor's Name\t"+editorName+"\n"+"Text";
     for(let i = 0;i<tabCount;i++)tmp += "\t";
     for(const tag of TagNames2nd){
         tmp += "\t"+tag.replace("\r","")+"\t";
